@@ -126,7 +126,7 @@ df_document_topic['dominant_topic'] = dominant_topic
 # split the dataset into training and validation datasets
 X = df_document_topic[df_document_topic.columns[0:best_lda_model.n_components]]
 y = data.controversy_label
-train_x, valid_x, train_y, valid_y = model_selection.train_test_split(X, y, test_size = .30)
+train_x, valid_x, train_y, valid_y = model_selection.train_test_split(X, y, test_size = .30 random_state = 7)
 
 ### 5c) running classifier
 classifier = linear_model.LogisticRegression()
