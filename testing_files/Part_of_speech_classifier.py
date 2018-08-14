@@ -65,7 +65,7 @@ def check_pos_tag(x, flag):
     except:
         pass
     return cnt
-
+# adding counts for POS tags as more features in the dataframe 
 df['noun_count'] = df['text'].apply(lambda x: check_pos_tag(x, 'noun'))
 df['verb_count'] = df['text'].apply(lambda x: check_pos_tag(x, 'verb'))
 df['adj_count'] = df['text'].apply(lambda x: check_pos_tag(x, 'adj'))
